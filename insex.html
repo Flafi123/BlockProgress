@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Progress</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app-container">
+      <!-- Блок Progress -->
+      <div id="progress-block" class="progress-container">
+        <svg class="progress-svg" viewBox="0 0 120 120">
+          <circle class="progress-bg" cx="60" cy="60" r="50"></circle>
+          <circle
+            id="progress-arc"
+            class="progress-value"
+            cx="60"
+            cy="60"
+            r="50"
+          ></circle>
+        </svg>
+      </div>
+
+      <!-- Панель управления -->
+      <div class="controls">
+        <div class="control-group">
+          <input type="number" id="value-input" value="0" />
+          <label for="value-input">Value</label>
+        </div>
+        <div class="control-group">
+          <label class="toggle">
+            <input type="checkbox" id="animate-toggle" />
+            <span class="slider"></span>
+          </label>
+          <span>Animate</span>
+        </div>
+        <div class="control-group">
+          <label class="toggle">
+            <input type="checkbox" id="hide-toggle" />
+            <span class="slider"></span>
+          </label>
+          <span>Hide</span>
+        </div>
+      </div>
+    </div>
+
+    <script src="progress.js"></script>
+  </body>
+</html>
